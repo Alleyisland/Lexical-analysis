@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+*把一段乱七八糟的C代码倒进这个DFA，就会变成青椒、土豆丝、炒肉、米饭...
+*/
 public class LexAnalysis
 {
     private static StringBuffer prog = new StringBuffer();
@@ -63,7 +66,7 @@ public class LexAnalysis
     }
 
 
-    //a DFA
+    //DFA本人
     private static void DFA()
     {
         read_prog();
@@ -173,7 +176,7 @@ public class LexAnalysis
         		break;
         	case 1:
         		ch=nextChar();
-        		if(isLetter(ch))
+        		if(isLetter(ch)||isNum(ch))
         			{lexeme+=ch;
         			state=1;
         			}
@@ -503,7 +506,7 @@ public class LexAnalysis
     }
 
     public static void main(String[] args) {
-        DFA();
+        DFA();//
     }
 }
 
