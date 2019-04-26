@@ -63,8 +63,8 @@ public class LexAnalysis
     }
 
 
-    //lexical analysis
-    private static void analysis()
+    //a DFA
+    private static void DFA()
     {
         read_prog();
         char ch;
@@ -503,7 +503,7 @@ public class LexAnalysis
     }
 
     public static void main(String[] args) {
-        analysis();
+        DFA();
     }
 }
 
