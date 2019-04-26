@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
-*把一段乱七八糟的C代码倒进这个DFA，就会变成青椒、土豆丝、炒肉、米饭...
+*把一段乱七八糟的C代码倒进这个DFA，就会哗哗哗哗变成青椒、土豆丝、炒肉、米饭、everything...
 */
 public class LexAnalysis
 {
@@ -42,15 +42,7 @@ public class LexAnalysis
     {
     	lexeme=lexeme.substring(0,lexeme.length()-1);
     }
-    
-    private static void getNumber()
-    {
-    	char ch=nextChar();
-    	while(isNum(ch))
-    		{lexeme+=ch;ch=nextChar();}
-    	accept(80);
-    }
-    
+   
     //accept&print
     private static void accept(int tips)
     {
@@ -65,8 +57,7 @@ public class LexAnalysis
 		state=0;
     }
 
-
-    //DFA本人
+    //DFA本体
     private static void DFA()
     {
         read_prog();
@@ -506,7 +497,7 @@ public class LexAnalysis
     }
 
     public static void main(String[] args) {
-        DFA();//
+        DFA();
     }
 }
 
