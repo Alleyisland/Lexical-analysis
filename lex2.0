@@ -1,53 +1,49 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-/*
-这是用哈希表重构的lexical analysis
-*/
-
 public class Java_LexAnalysis
 {
     private static StringBuffer prog = new StringBuffer();
     private static String lexeme=new String();
     private static int count=1;
     private static int state=0;
-    private static HashMap<String, Integer> map=new HashMap<String, Integer>();
+	private static HashMap<String, Integer> map=new HashMap<String, Integer>();
 	
-	  public static void initKeyWordMap()
-	  {
-	    map.put("auto", 1);
-	    map.put("break", 2);
-	    map.put("case", 3);
-	    map.put("char", 4);
-	    map.put("const", 5);
-	    map.put("continue", 6);
-	    map.put("default", 7);
-    	map.put("do", 8);
-    	map.put("double", 9);
-	    map.put("else", 10);
-     	map.put("enum", 11);
-	    map.put("extern", 12);
-	    map.put("float", 13);
-	    map.put("for", 14);
-	    map.put("goto", 15);
-	    map.put("if", 16);
-	    map.put("int", 17);
-	    map.put("long", 18);
-	    map.put("register", 19);
-	    map.put("return", 20);
-	    map.put("short", 21);
-	    map.put("signed", 22);
-	    map.put("sizeof", 23);
-	    map.put("static", 24);
-	    map.put("struct", 25);
-	    map.put("switch", 26);
-	    map.put("typedef", 27);
-	    map.put("union", 28);
-	    map.put("unsigned", 29);
-	    map.put("void", 30);
-	    map.put("volatile", 31);
-	    map.put("while", 32);
-	  }
+	public static void initKeyWordMap()
+	{
+	map.put("auto", 1);
+	map.put("break", 2);
+	map.put("case", 3);
+	map.put("char", 4);
+	map.put("const", 5);
+	map.put("continue", 6);
+	map.put("default", 7);
+	map.put("do", 8);
+	map.put("double", 9);
+	map.put("else", 10);
+	map.put("enum", 11);
+	map.put("extern", 12);
+	map.put("float", 13);
+	map.put("for", 14);
+	map.put("goto", 15);
+	map.put("if", 16);
+	map.put("int", 17);
+	map.put("long", 18);
+	map.put("register", 19);
+	map.put("return", 20);
+	map.put("short", 21);
+	map.put("signed", 22);
+	map.put("sizeof", 23);
+	map.put("static", 24);
+	map.put("struct", 25);
+	map.put("switch", 26);
+	map.put("typedef", 27);
+	map.put("union", 28);
+	map.put("unsigned", 29);
+	map.put("void", 30);
+	map.put("volatile", 31);
+	map.put("while", 32);
+	}
 
     private static void read_prog()
     {
@@ -68,7 +64,7 @@ public class Java_LexAnalysis
     	return c;
     }
 
-	  private static boolean isLetter(char c)
+	private static boolean isLetter(char c)
     {
     	return  Character.isLowerCase(c)|| 
     			Character.isUpperCase(c)||
