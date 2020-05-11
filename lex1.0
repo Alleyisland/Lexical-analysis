@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 /**
 *这是一个基于确定性有限状态自动机的C子集的词法分析器的粗略实现。
-*把一段乱七八糟的C代码倒进这个DFA，就会哗哗哗哗变成青椒、土豆丝、炒肉、米饭、everything...
 */
 public class LexAnalysis
 {
